@@ -4,7 +4,7 @@ declare const codePage: {
 	* @param page The page number to set.
 	* @example
 	* ```
-	* const codePage = require("code-page");
+	* const codePage = require("win-codepage");
 	*
 	* (async () => {
 	* 	await codePage()
@@ -25,7 +25,7 @@ declare const codePage: {
 	* @param page The page number to set.
 	* @example
 	* ```
-	* const codePage = require("code-page");
+	* const codePage = require("win-codepage");
 	*
 	* codePage.sync()
 	* //=> 850
