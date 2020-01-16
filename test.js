@@ -3,8 +3,8 @@ import codePage from "."
 
 test("main", async (t) => {
 	if (process.platform === "win32") {
-		t.is(await codePage(), 850)
-		t.is(codePage.sync(), 850)
+		t.is(typeof await codePage(), "number")
+		t.is(typeof codePage.sync(), "number")
 	} else {
 		t.throwsAsync(() => codePage(), {
 			instanceOf: Error,
