@@ -6,11 +6,11 @@ test("main", async (t) => {
 		t.is(typeof await codePage(), "number")
 		t.is(typeof codePage.sync(), "number")
 	} else {
-		t.throwsAsync(() => codePage(), {
+		await t.throwsAsync(codePage, {
 			instanceOf: Error,
 			message: "Only Windows is supported!",
 		})
-		t.throws(() => codePage.sync(), {
+		t.throws(codePage.sync, {
 			instanceOf: Error,
 			message: "Only Windows is supported!",
 		})
