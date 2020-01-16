@@ -1,41 +1,37 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Code page [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/code-page/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/code-page)
 
-My awesome module.
+Get and set the current Windows terminal code page.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/code-page.png)](https://npmjs.com/package/code-page)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install code-page
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const codePage = require("code-page");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+(async () => {
+	await codePage()
+	//=> 850
+
+	await codePage(65001) // Set to unicode
+
+	await codePage()
+	//=> 65001
+})()
 ```
 
 ## API
 
-### theModule(input, options?)
+### codePage(page)
 
-#### input
+#### page
 
-Type: `string`
+Type: `number`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The page number to set.

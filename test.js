@@ -1,13 +1,14 @@
 import test from "ava"
-import theModule from "."
+import codePage from "."
 
-test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+test("main", async (t) => {
+	if (process.platform === "win32") {
+		t.is(await codePage(), 850)
+		t.is(codePage.sync(), 850)
+	} else {
+		t.throws(codePage, {
+			instanceOf: Error,
+			message: "Only Windows is supported!",
+		})
+	}
 })

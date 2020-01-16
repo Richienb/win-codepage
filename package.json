@@ -1,33 +1,55 @@
 {
-    "name": "the-module",
-    "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
-    "author": "Richie Bendall <richiebendall@gmail.com>",
-    "license": "MIT",
-    "main": "index.js",
-    "files": [
-        "index.js",
-        "index.d.ts"
-    ],
-    "engines": {
-        "node": ">=8"
-    },
-    "scripts": {
-        "lint": "xo",
-        "test": "yarn lint && ava"
-    },
-    "keywords": [],
-    "dependencies": {},
-    "devDependencies": {
-        "ava": "^2.4.0",
-        "eslint-config-richienb": "^0.3.0",
-        "xo": "^0.25.3"
-    },
-    "resolutions": {
-        "eslint": "^6.8.0"
-    },
-    "xo": {
-        "extends": "richienb/node"
-    }
+	"name": "code-page",
+	"version": "0.0.0",
+	"description": "My awesome module.",
+	"repository": "https://github.com/Richienb/code-page.git",
+	"author": "Richie Bendall <richiebendall@gmail.com>",
+	"license": "MIT",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"engines": {
+		"node": ">=8.3"
+	},
+	"scripts": {
+		"lint": "xo",
+		"test": "yarn lint && ava"
+	},
+	"keywords": [
+		"windows",
+		"terminal",
+		"bash",
+		"cmd",
+		"code",
+		"page",
+		"pages",
+		"chcp",
+		"unicode",
+		"ansi",
+		"iso",
+		"check",
+		"promise",
+		"async",
+		"sync"
+	],
+	"dependencies": {
+		"@sindresorhus/is": "^1.2.0",
+		"command-exists": "^1.2.8",
+		"execa": "^4.0.0",
+		"is-windows": "^1.0.2",
+		"ow": "^0.15.0"
+	},
+	"devDependencies": {
+		"ava": "^2.4.0",
+		"eslint-config-richienb": "^0.3.0",
+		"xo": "^0.25.3"
+	},
+	"resolutions": {
+		"eslint": "^6.8.0"
+	},
+	"xo": {
+		"extends": "richienb/node"
+	}
 }
