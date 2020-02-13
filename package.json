@@ -39,7 +39,7 @@
 		"command-exists": "^1.2.8",
 		"execa": "^4.0.0",
 		"is-windows": "^1.0.2",
-		"ow": "^0.15.0"
+		"ow": "^0.16.0"
 	},
 	"devDependencies": {
 		"ava": "^2.4.0",
