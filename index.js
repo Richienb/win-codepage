@@ -21,7 +21,8 @@ module.exports = async (page) => {
 		}
 	} else {
 		const { stdout } = await execa("chcp")
-		return Number(stdout.match(/Active code page: (.+)/)[1])
+		//matching "Active code page:" won't work on localized Windows. For example, on Chinese Windows it's 活动代码页
+		return Number(stdout.match(/(\d+)$/)[1])
 	}
 }
 
@@ -40,6 +41,7 @@ module.exports.sync = (page) => {
 		}
 	} else {
 		const { stdout } = execa.sync("chcp")
-		return Number(stdout.match(/Active code page: (.+)/)[1])
+		//matching "Active code page:" won't work on localized Windows. For example, on Chinese Windows it's 活动代码页
+		return Number(stdout.match(/(\d+)$/)[1])
 	}
 }
